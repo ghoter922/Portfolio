@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { FULL_NAME, NAV } from "@/lib/data";
+import { FULL_NAME, NAV, PHONE } from "@/lib/data";
 
 export default function Header() {
   const [menu, setMenu] = useState(false);
@@ -36,7 +36,9 @@ export default function Header() {
             <Image src="/eshfaq.jpg" alt={FULL_NAME} fill sizes="48px" className="object-cover object-top" />
           </a>
           <a
-            href="#contact"
+            href={`https://wa.me/${PHONE.replace(/\D/g, "")}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="group flex w-fit items-center gap-2 whitespace-nowrap justify-self-end rounded-full bg-white py-1.5 pl-4 pr-1.5 sm:gap-3 sm:pl-6 text-sm font-semibold text-black shadow-lg"
           >
             Let&apos;s Talk
