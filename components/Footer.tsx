@@ -5,8 +5,8 @@ import { jump } from "@/lib/jump";
 
 export default function Footer() {
   return (
-      <footer className="overflow-hidden bg-[var(--dark2)] px-5 pt-16 text-white md:px-10">
-        <div className="mx-auto flex max-w-6xl flex-col items-stretch gap-4 md:flex-row md:flex-wrap md:items-center md:justify-between md:gap-6">
+      <footer className="overflow-hidden bg-[var(--dark2)] px-4 pt-16 text-white md:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col items-stretch gap-4 md:flex-row md:flex-wrap md:items-center md:justify-between md:gap-6">
           <nav className="grid grid-cols-3 gap-2 md:flex md:flex-wrap md:gap-6">
             {["Home#home", "About#about", "Projects#work", "Approach#approach", "Resume#resume", "Contact#contact"].map((x) => {
               const [l, h] = x.split("#");
@@ -32,7 +32,7 @@ export default function Footer() {
             </span>
           ))}
         </div>
-        <div className="mx-auto flex max-w-6xl flex-col items-center gap-1 py-6 pb-20 text-center text-xs text-white/50 md:flex-row md:flex-wrap md:justify-between md:gap-2 md:pb-6 md:text-left">
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-1 py-6 pb-20 text-center text-xs text-white/50 md:flex-row md:flex-wrap md:justify-between md:gap-2 md:pb-6 md:text-left">
           <span>Designed &amp; built with curiosity.</span>
           <span>© 2026 {FULL_NAME} • All rights reserved.</span>
         </div>

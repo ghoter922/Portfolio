@@ -36,8 +36,8 @@ export default function About() {
   }, []);
 
   return (
-    <section id="about" ref={ref} className="bg-[var(--light)] px-5 pb-16 pt-24 md:px-10">
-      <div className="mx-auto max-w-6xl">
+    <section id="about" ref={ref} className="bg-[var(--light)] px-4 pb-16 pt-24 md:px-8">
+      <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-center gap-4 border-b border-neutral-300 pb-8 text-center md:flex-row md:flex-wrap md:gap-6 md:text-left">
           <h2 className="text-6xl font-medium tracking-tight md:text-7xl">About</h2>
           <div className="hidden h-14 w-px bg-neutral-300 md:block" />

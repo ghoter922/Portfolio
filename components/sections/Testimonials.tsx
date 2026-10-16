@@ -4,8 +4,8 @@ import { TESTIMONIALS } from "@/lib/data";
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="bg-[var(--light)] px-5 py-28 md:px-10">
-      <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[1fr_1.3fr]">
+    <section id="testimonials" className="bg-[var(--light)] px-4 py-28 md:px-8">
+      <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[1fr_1.3fr]">
         <div className="md:sticky md:top-28 md:self-start">
           <span className="pill reveal bg-white">Testimonials</span>
           <h2 className="reveal mt-6 text-4xl font-bold leading-tight md:text-5xl">

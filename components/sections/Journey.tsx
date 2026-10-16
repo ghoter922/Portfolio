@@ -2,8 +2,8 @@ import { JOURNEY, RESUME, TOOLS } from "@/lib/data";
 
 export default function Journey() {
   return (
-      <section id="resume" className="bg-[var(--dark)] px-5 py-28 text-white md:px-10">
-        <div className="mx-auto max-w-6xl">
+      <section id="resume" className="bg-[var(--dark)] px-4 py-28 text-white md:px-8">
+        <div className="mx-auto max-w-7xl">
           <h2 className="reveal text-6xl font-black uppercase md:text-8xl">My Journey.</h2>
           <div className="mt-16 border-l border-white/20">
             {JOURNEY.map(([y, r, o, d]) => (

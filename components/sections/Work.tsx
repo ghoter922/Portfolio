@@ -27,8 +27,8 @@ export default function Work() {
   };
 
   return (
-    <section id="work" className="bg-[var(--dark2)] px-5 text-white md:px-10 md:pt-24">
-      <div className="mx-auto hidden max-w-6xl flex-col items-center justify-between gap-6 text-center md:flex md:flex-row md:flex-wrap md:items-end md:text-left">
+    <section id="work" className="bg-[var(--dark2)] px-4 text-white md:px-8 md:pt-24">
+      <div className="mx-auto hidden max-w-7xl flex-col items-center justify-between gap-6 text-center md:flex md:flex-row md:flex-wrap md:items-end md:text-left">
         <div>
           <span className="pill">Selected work</span>
           <h2 className="mt-6 text-4xl font-bold md:text-5xl">
@@ -50,7 +50,7 @@ export default function Work() {
               A Few Things I’ve <span className="text-[var(--accent)]">Designed.</span>
             </h2>
           </div>
-          <div className="mx-auto grid w-full max-w-6xl items-center gap-4 md:gap-8 md:grid-cols-[1.4fr_1fr] md:gap-14">
+          <div className="mx-auto grid w-full max-w-7xl items-center gap-4 md:gap-8 md:grid-cols-[1.4fr_1fr] md:gap-14">
             {/* Images */}
             <div className="relative aspect-video overflow-hidden rounded-2xl md:aspect-[4/3] [@media(max-height:620px)]:aspect-[2/1]">
               {PROJECTS.map((x, i) => (
