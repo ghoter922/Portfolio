@@ -50,10 +50,10 @@ export default function About() {
             href="https://www.linkedin.com/in/muhammad-ishfaq-/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group ml-auto hidden md:flex items-center gap-4 rounded-lg bg-[var(--accent)] py-2 pl-5 pr-2 text-sm font-semibold text-black shadow-[0_10px_30px_-10px_var(--accent)]"
+            className="group ml-auto hidden md:flex items-center gap-4 rounded-full bg-[var(--accent)] py-2 pl-5 pr-2 text-sm font-semibold text-black shadow-[0_10px_30px_-10px_var(--accent)]"
           >
             Hire Me
-            <span className="flex h-8 w-8 items-center justify-center rounded-md bg-white/20 transition-transform group-hover:translate-x-1">→</span>
+            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 transition-transform group-hover:translate-x-1">→</span>
           </a>
         </div>
 
@@ -81,10 +81,10 @@ export default function About() {
             href="https://www.linkedin.com/in/muhammad-ishfaq-/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group mt-10 flex w-full items-center justify-center gap-4 md:hidden rounded-lg bg-[var(--accent)] py-2 pl-5 pr-2 text-sm font-semibold text-black shadow-[0_10px_30px_-10px_var(--accent)]"
+            className="group mt-10 flex w-full items-center justify-center gap-4 md:hidden rounded-full bg-[var(--accent)] py-2 pl-5 pr-2 text-sm font-semibold text-black shadow-[0_10px_30px_-10px_var(--accent)]"
           >
             Hire Me
-            <span className="flex h-8 w-8 items-center justify-center rounded-md bg-white/20 transition-transform group-hover:translate-x-1">→</span>
+            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 transition-transform group-hover:translate-x-1">→</span>
           </a>
 
       </div>

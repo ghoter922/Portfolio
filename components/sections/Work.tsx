@@ -89,7 +89,7 @@ export default function Work() {
                 ))}
               </div>
               <div className="mt-5 flex items-end justify-center gap-5 md:mt-8 md:justify-start">
-                <a href={PROJECTS[active].link} target="_blank" rel="noopener noreferrer" className="w-full rounded-md bg-[var(--accent)] text-center text-black px-5 py-3 md:w-auto text-xs font-bold uppercase md:px-7 md:py-4 md:text-sm tracking-widest hover:brightness-110">
+                <a href={PROJECTS[active].link} target="_blank" rel="noopener noreferrer" className="w-full rounded-full bg-[var(--accent)] text-center text-black px-5 py-3 md:w-auto text-xs font-bold uppercase md:px-7 md:py-4 md:text-sm tracking-widest hover:brightness-110">
                   View case study ↗
                 </a>
                 <span className="hand hidden text-lg leading-tight text-white/50 sm:inline">Tap to view<br />full case study</span>

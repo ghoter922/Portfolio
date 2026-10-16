@@ -10,7 +10,7 @@ export default function Contact() {
         <p className="reveal mx-auto mt-8 max-w-md text-neutral-600">
           Have a project, idea, or a problem to solve? Let&apos;s turn it into a great experience together.
         </p>
-        <a href={`https://wa.me/${PHONE.replace(/\D/g, "")}?text=${encodeURIComponent("Hi Eshfaq, I came across your portfolio and would like to talk about a project.")}`} target="_blank" rel="noopener noreferrer" className="reveal mt-10 inline-block rounded-md bg-[var(--accent)] px-10 py-5 text-sm font-bold uppercase tracking-widest text-black hover:brightness-110">
+        <a href={`https://wa.me/${PHONE.replace(/\D/g, "")}?text=${encodeURIComponent("Hi Eshfaq, I came across your portfolio and would like to talk about a project.")}`} target="_blank" rel="noopener noreferrer" className="reveal mt-10 inline-block rounded-full bg-[var(--accent)] px-10 py-5 text-sm font-bold uppercase tracking-widest text-black hover:brightness-110">
           Start a conversation ↗
         </a>
         <div className="reveal mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm font-semibold">
