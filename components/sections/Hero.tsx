@@ -64,7 +64,7 @@ export default function Hero({ loaded }: { loaded: boolean }) {
         {/* giant name — letters rise out of masks */}
         <h1
           aria-label={FULL_NAME}
-          className="pointer-events-none absolute bottom-[2vh] z-20 flex select-none whitespace-nowrap text-[25vw] font-semibold leading-[0.95] tracking-tighter text-white"
+          className="pointer-events-none relative z-20 mt-4 flex max-w-full select-none justify-center whitespace-nowrap text-[clamp(4rem,18vw,16rem)] font-semibold leading-[0.95] tracking-tighter text-white xl:mt-2"
         >
           {NAME.split("").map((ch, i) => {
             const last = i === NAME.length - 1;
