@@ -70,10 +70,11 @@ export const STEPS = [
   },
 ];
 export const JOURNEY = [
-  ["Nov 2024 — Present", "Product Designer", "Slicon Systems", "Designing web and mobile applications from initial concept to final UI — collaborating with clients and developers, creating wireframes, user flows and high-fidelity Figma designs, building accessible, scalable design systems, and redesigning products to improve usability and navigation while managing multiple projects. Proactive in adopting AI workflows and modern design frameworks."],
-  ["Jan 2023 — Nov 2024", "Product Designer", "Avialdo Solutions", "Redesigned web and mobile apps for smoother experiences, built design systems for consistency, applied accessibility best practices, and worked with cross-functional teams to onboard 100+ clients — directly supporting revenue growth through improved UX. Also contributed to branding and visual design."],
-  ["Certification", "UI Design", "California Institute of the Arts", "Specialized program in interface craft."],
-  ["Certification", "UX Certification", "Memorisely Bootcamps", "Prototyping, design systems, typography and interaction design."],
+  ["Nov 2024 — Present", "Product Designer", "Slicon Systems", "Design web and mobile interfaces from early concepts to polished UI. Create wireframes, user flows, and high-fidelity Figma designs; collaborate with clients, developers, and cross-functional teams; build accessible, scalable design systems; and improve existing products through clearer navigation and usability. Manage multiple projects and adopt AI workflows and modern design frameworks."],
+  ["Jan 2023 — Nov 2024", "Product Designer", "Avialdo Solutions", "Redesigned web and mobile products to make them easier to use, built consistent design systems, and applied accessibility best practices. Partnered with cross-functional teams to onboard 100+ clients and support revenue growth through improved UX. Also contributed to product branding and visual design."],
+  ["Mar 2025 — Apr 2025", "User Interface Design", "California Institute of the Arts", "Completed a specialized program in interface craft."],
+  ["Aug 2024 — Jan 2025", "User Interface Design", "Memorisely", "Studied prototyping, typography, and Miro interaction design."],
+  ["2019 — 2021", "Associate Degree in Computer Science", "University of Central Punjab, Lahore", "Completed an associate degree in computer science."],
 ];
 
 export const TESTIMONIALS = [
