@@ -61,10 +61,18 @@ const STEP_VISUALS = [
 export default function Process() {
   const ref = useRef<HTMLElement>(null);
   const [prog, setProg] = useState(0);
+  const [wide, setWide] = useState(false);
   useEffect(() => {
+    const media = window.matchMedia("(min-width: 1280px)");
+    const syncLayout = () => {
+      setWide(media.matches);
+      if (!media.matches) setProg(0);
+    };
+    syncLayout();
     let raf = 0;
     const update = () => {
       raf = 0;
+      if (!media.matches) return;
       const el = ref.current;
       if (!el) return;
       const r = el.getBoundingClientRect();
@@ -75,9 +83,11 @@ export default function Process() {
       if (!raf) raf = requestAnimationFrame(update);
     };
     update();
+    media.addEventListener("change", syncLayout);
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
     return () => {
+      media.removeEventListener("change", syncLayout);
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
       cancelAnimationFrame(raf);
@@ -89,9 +99,9 @@ export default function Process() {
   const arrival = (i: number) => Math.min(1, Math.max(0, (prog - i / n) * n));
   const current = Math.min(n - 1, Math.floor(prog * n));
   return (
-    <section id="approach" ref={ref} className="relative bg-[var(--dark)] text-white" style={{ height: `${n * 100}vh` }}>
-      <div className="sticky top-0 flex h-screen flex-col justify-center overflow-hidden px-5 py-14 md:px-8">
-        <div className="mx-auto mb-8 w-full max-w-7xl border-t border-white/30 pt-4 sm:mb-10">
+    <section id="approach" ref={ref} className="relative bg-[var(--dark)] py-14 text-white xl:py-0" style={{ height: wide ? `${n * 100}vh` : "auto" }}>
+      <div className="relative flex flex-col justify-center overflow-visible px-4 py-4 sm:px-6 md:px-8 xl:sticky xl:top-0 xl:h-screen xl:overflow-hidden xl:py-14">
+        <div className="mx-auto mb-12 w-full max-w-7xl border-t border-white/30 pt-4 sm:mb-10 xl:mb-10">
           <div className="flex items-start justify-between gap-6">
             <span className="pill text-white">My Process</span>
             <h2 className="max-w-md text-right text-2xl font-medium leading-tight sm:text-3xl md:text-4xl">
@@ -108,8 +118,8 @@ export default function Process() {
                 key={s.key}
                 className={`relative flex min-h-[205px] flex-col rounded-2xl border border-white/10 bg-white p-5 text-black shadow-[0_24px_60px_-30px_rgba(0,0,0,0.65)] will-change-transform sm:min-h-[225px] sm:p-6 lg:col-span-2 ${i === 3 ? "lg:col-start-2" : ""} ${i === 4 ? "lg:col-start-4" : ""}`}
                 style={{
-                  opacity: t,
-                  transform: `perspective(900px) translate3d(0, ${(1 - t) * 105}vh, 0) rotateX(${180 * (1 - t)}deg)`,
+                  opacity: wide ? t : 1,
+                  transform: wide ? `perspective(900px) translate3d(0, ${(1 - t) * 105}vh, 0) rotateX(${180 * (1 - t)}deg)` : "none",
                   transition: "opacity 120ms linear",
                 }}
               >
@@ -141,7 +151,7 @@ export default function Process() {
           })}
         </div>
 
-        <div className="absolute bottom-5 left-1/2 flex -translate-x-1/2 gap-2 sm:bottom-7">
+        <div className="absolute bottom-5 left-1/2 hidden -translate-x-1/2 gap-2 sm:bottom-7 xl:flex">
           {STEPS.map((s, i) => (
             <span
               key={s.key}
