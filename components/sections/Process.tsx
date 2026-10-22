@@ -58,11 +58,8 @@ const STEP_VISUALS = [
     <text x="88" y="46" fontSize="16" fontWeight="800" fill="#fff" textAnchor="middle">9.2</text>
   </>,
 ];
-const CARD_TILT = [-8, 6, -4, 9, -5];
-
 export default function Process() {
   const ref = useRef<HTMLElement>(null);
-  const [enter, setEnter] = useState(0);
   const [prog, setProg] = useState(0);
   useEffect(() => {
     let raf = 0;
@@ -72,7 +69,6 @@ export default function Process() {
       if (!el) return;
       const r = el.getBoundingClientRect();
       const vh = window.innerHeight;
-      setEnter(Math.min(1, Math.max(0, 1 - r.top / vh)));
       setProg(Math.min(1, Math.max(0, -r.top / (r.height - vh))));
     };
     const onScroll = () => {
@@ -89,40 +85,32 @@ export default function Process() {
   }, []);
 
   const n = STEPS.length;
-  // first n-1 cards fly away over 90% of the pinned scroll; the last one stays
-  const fly = (i: number) => Math.min(1, Math.max(0, (prog / 0.9) * (n - 1) - i));
-  const current = Math.min(n - 1, Math.floor((prog / 0.9) * (n - 1) + 0.5));
-  const slide = (1 - enter) * 30;
-
+  // Reveal cards in sequence as they rise into their grid positions.
+  const arrival = (i: number) => Math.min(1, Math.max(0, (prog - i / n) * n));
+  const current = Math.min(n - 1, Math.floor(prog * n));
   return (
     <section id="approach" ref={ref} className="relative bg-[var(--dark)] text-white" style={{ height: `${n * 100}vh` }}>
-      <div className="sticky top-0 flex h-screen flex-col items-center justify-center overflow-hidden">
-        <div
-          className="pointer-events-none relative mb-6 w-full sm:mb-10 select-none whitespace-nowrap px-5 text-[14vw] font-semibold leading-none tracking-tight md:px-10 md:text-[11vw] xl:absolute xl:inset-x-0 xl:mb-0 xl:top-[24%] xl:text-[8vw]"
-          style={{ transform: `translateX(${slide}vw)` }}
-        >
-          Our <span className="text-[var(--accent)]">Work</span>
-        </div>
-        <div
-          className="pointer-events-none relative order-last mt-6 w-full sm:mt-10 select-none whitespace-nowrap px-5 text-right text-[14vw] font-semibold leading-none tracking-tight md:px-10 md:text-[11vw] xl:absolute xl:inset-x-0 xl:order-none xl:mt-0 xl:top-[52%] xl:text-[8vw]"
-          style={{ transform: `translateX(${-slide}vw)` }}
-        >
-          Process
+      <div className="sticky top-0 flex h-screen flex-col justify-center overflow-hidden px-5 py-14 md:px-8">
+        <div className="mx-auto mb-8 w-full max-w-7xl border-t border-white/30 pt-4 sm:mb-10">
+          <div className="flex items-start justify-between gap-6">
+            <span className="pill text-white">My Process</span>
+            <h2 className="max-w-md text-right text-2xl font-medium leading-tight sm:text-3xl md:text-4xl">
+              Thoughtful steps.<br /><span className="text-[var(--accent)]">Purposeful design.</span>
+            </h2>
+          </div>
         </div>
 
-        <div className="relative h-[330px] w-[min(440px,88vw)] sm:h-[350px] md:h-[360px]">
+        <div className="mx-auto grid w-full max-w-7xl place-content-center grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-6">
           {STEPS.map((s, i) => {
-            const t = fly(i);
-            const last = i === n - 1;
+            const t = arrival(i);
             return (
               <article
                 key={s.key}
-                className="absolute inset-0 flex flex-col rounded-3xl bg-white p-5 text-black sm:p-7 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)] will-change-transform"
+                className={`relative flex min-h-[205px] flex-col rounded-2xl border border-white/10 bg-white p-5 text-black shadow-[0_24px_60px_-30px_rgba(0,0,0,0.65)] will-change-transform sm:min-h-[225px] sm:p-6 lg:col-span-2 ${i === 3 ? "lg:col-start-2" : ""} ${i === 4 ? "lg:col-start-4" : ""}`}
                 style={{
-                  zIndex: n - i,
-                  transform: last
-                    ? `rotate(${CARD_TILT[i]}deg)`
-                    : `translate(${-t * 60}vw, ${-t * 110}vh) rotate(${CARD_TILT[i] - t * 25}deg)`,
+                  opacity: t,
+                  transform: `perspective(900px) translate3d(0, ${(1 - t) * 105}vh, 0) rotateX(${180 * (1 - t)}deg)`,
+                  transition: "opacity 120ms linear",
                 }}
               >
                 <div className="flex items-start justify-between">
@@ -130,16 +118,18 @@ export default function Process() {
                     <span className="h-2 w-2 rounded-full bg-[var(--accent)]" />
                     STEP:0{i + 1}
                   </span>
-                  <span className="flex h-16 w-24 items-center justify-center rounded-2xl bg-[var(--accent)] p-2 sm:h-20 sm:w-28 sm:p-2.5">
+                  <span className="flex h-12 w-16 items-center justify-center rounded-xl bg-[var(--accent)] p-1.5 sm:h-14 sm:w-20">
                     <svg viewBox="0 0 112 80" className="h-full w-full" aria-hidden>
                       {STEP_VISUALS[i]}
                     </svg>
                   </span>
                 </div>
-                <p className="mt-4 text-xs font-bold uppercase tracking-widest text-neutral-500">{s.key}</p>
-                <h3 className="mt-auto text-xl font-bold sm:text-2xl">{s.title}</h3>
-                <p className="mt-2 text-sm text-neutral-600">{s.desc}</p>
-                <div className="mt-3 flex flex-wrap gap-1.5 sm:mt-4 sm:gap-2">
+                <div className="mt-auto">
+                  <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.18em] text-neutral-500">{s.key}</p>
+                  <h3 className="text-lg font-bold leading-snug sm:text-xl">{s.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-neutral-600">{s.desc}</p>
+                </div>
+                <div className="mt-3 flex flex-wrap gap-1.5">
                   {s.acts.map((a) => (
                     <span key={a} className="rounded-full bg-neutral-100 px-3 py-1 text-xs">
                       {a}
@@ -151,7 +141,7 @@ export default function Process() {
           })}
         </div>
 
-        <div className="absolute bottom-8 flex gap-2">
+        <div className="absolute bottom-5 left-1/2 flex -translate-x-1/2 gap-2 sm:bottom-7">
           {STEPS.map((s, i) => (
             <span
               key={s.key}
