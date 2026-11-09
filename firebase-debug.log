@@ -1,0 +1,177 @@
+[debug] [2026-11-09T18:08:35.683Z] ----------------------------------------------------------------------
+[debug] [2026-11-09T18:08:35.686Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\TLS\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2026-11-09T18:08:35.686Z] CLI Version:   15.34.0
+[debug] [2026-11-09T18:08:35.686Z] Platform:      win32
+[debug] [2026-11-09T18:08:35.687Z] Node Version:  v24.22.0
+[debug] [2026-11-09T18:08:35.687Z] Detected Agent: codex_cli
+[debug] [2026-11-09T18:08:35.687Z] Time:          Mon Nov 09 2026 23:08:35 GMT+0500 (Pakistan Standard Time)
+[debug] [2026-11-09T18:08:35.687Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-11-09T18:08:35.702Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2026-11-09T18:08:39.435Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-11-09T18:08:39.435Z] > authorizing via signed-in user (ishfaqkh5kamal@gmail.com)
+[debug] [2026-11-09T18:08:39.435Z] [iam] checking project eshfaq-portfolio for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-11-09T18:08:39.436Z] Checked if tokens are valid: false, expires at: 1792150256876
+[debug] [2026-11-09T18:08:39.436Z] Checked if tokens are valid: false, expires at: 1792150256876
+[debug] [2026-11-09T18:08:39.437Z] > refreshing access token with scopes: []
+[debug] [2026-11-09T18:08:39.438Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-11-09T18:08:39.438Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-11-09T18:08:39.856Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-11-09T18:08:39.856Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-11-09T18:08:39.868Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/eshfaq-portfolio:testIamPermissions [none]
+[debug] [2026-11-09T18:08:39.868Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/eshfaq-portfolio:testIamPermissions  x-goog-user-project=eshfaq-portfolio
+[debug] [2026-11-09T18:08:39.869Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/eshfaq-portfolio:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-11-09T18:08:40.088Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2026-11-09T18:08:40.089Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2026-11-09T18:08:41.237Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/eshfaq-portfolio:testIamPermissions 200
+[debug] [2026-11-09T18:08:41.237Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/eshfaq-portfolio:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-11-09T18:08:41.237Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:41.237Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:41.238Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/eshfaq-portfolio [none]
+[debug] [2026-11-09T18:08:41.762Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/eshfaq-portfolio 200
+[debug] [2026-11-09T18:08:41.763Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/eshfaq-portfolio {"projectId":"eshfaq-portfolio","projectNumber":"1000580444621","displayName":"Eshfaq-Portfolio","name":"projects/eshfaq-portfolio","resources":{"hostingSite":"eshfaq-portfolio"},"state":"ACTIVE","labels":{"firebase":"enabled"},"etag":"1_1fb53e52-7b03-46d4-91f8-f98f101f1735"}
+[info] 
+[info] === Deploying to 'eshfaq-portfolio'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2026-11-09T18:08:41.770Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:41.771Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:41.771Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/eshfaq-portfolio/sites/eshfaq-portfolio [none]
+[debug] [2026-11-09T18:08:43.633Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/eshfaq-portfolio/sites/eshfaq-portfolio 200
+[debug] [2026-11-09T18:08:43.633Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/eshfaq-portfolio/sites/eshfaq-portfolio {"name":"projects/eshfaq-portfolio/sites/eshfaq-portfolio","defaultUrl":"https://eshfaq-portfolio.web.app","type":"DEFAULT_SITE"}
+[debug] [2026-11-09T18:08:43.638Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:43.638Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:43.639Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/eshfaq-portfolio/sites/eshfaq-portfolio/versions [none]
+[debug] [2026-11-09T18:08:43.639Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/eshfaq-portfolio/sites/eshfaq-portfolio/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2026-11-09T18:08:45.347Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/eshfaq-portfolio/sites/eshfaq-portfolio/versions 200
+[debug] [2026-11-09T18:08:45.347Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/eshfaq-portfolio/sites/eshfaq-portfolio/versions {"name":"projects/eshfaq-portfolio/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[eshfaq-portfolio]: beginning deploy... 
+[info] i  hosting[eshfaq-portfolio]: found 69 files in out 
+[debug] [2026-11-09T18:08:45.366Z] [hosting] uploading with 200 concurrency
+[debug] [2026-11-09T18:08:45.390Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:45.390Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:45.391Z] [hosting] hash cache [b3V0] stored for 69 files
+[debug] [2026-11-09T18:08:45.392Z] [hosting][hash queue][FINAL] {"max":19,"min":0,"avg":7.088153217767746,"active":0,"complete":69,"success":69,"errored":0,"retried":0,"total":69,"elapsed":25}
+[debug] [2026-11-09T18:08:45.392Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/eshfaq-portfolio/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3:populateFiles [none]
+[debug] [2026-11-09T18:08:45.392Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/eshfaq-portfolio/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3:populateFiles {"files":{"/window.svg":"6bd2003bd35bb32c1c0d99ab3aeac0cc1edaefd79f27df1d954bc87184048d74\r","/vercel.svg":"529a1a21b4a82475a82db26173c28d7b27e2dc9d4b900eaf1c5329d96eea4ddd\r","/next.svg":"0665b9ab4493aa9d7e988b57024e28772ae543e804b8cf6b0a3633854b7c3c7f\r","/globe.svg":"6502a3e6120bf2d6e8417e7c40bb57fb8a6954de9c86d3f43076a75b60cd23a2\r","/file.svg":"5a09df6187e21aa9a7d05094389385876ac93c818e1dcbb77a26a8fe408bf79c\r","/eshfaq.jpg":"830b7d005c058bc1b734faef02162f68d020d94b0d660b7b031c7e3ebf4ab915\r","/Eshfaq-Ahmad-Resume.pdf":"b10b600127d73f142d2ff4b011e487fede8ea0caa9ed16c3e4d06af0793d9847","/screens/screen-9.png":"c7c81c3678cfc1ddbb9c41c204e478937177ce837a3e486d1a407cddad44674f\r","/screens/screen-8.png":"a25e3623fe81e7651b872260ff096a6712e855ac90963737281d3f0a022acf8a\r","/screens/screen-7.png":"227c00067c715b7e7f597555f3d74068a55f22d71b7114ce4d7c22632d3e3c8f\r","/screens/screen-6.png":"94d6536753b3e2b93b9350058bbae7723bf435735eab6bd57ede85f2864d3d61\r","/screens/screen-5.png":"884e056e545ee1ffbd7165fd36bc498c6a3d24bd8cbc3cd5a2d19097e1ba5184\r","/screens/screen-4.png":"5b1f2f24add48afce0c1108b27d05f6bdffeba9908533067c398602371b4eb3c\r","/screens/screen-3.png":"c78fa3c0ee1c527fe57d7d2a511fc8ff51454a1bd738bdcbc099ab495e3326cf\r","/screens/screen-2.png":"75bb4fa6d8806e42c59b838466d884b908ef550bce28376aac288ddd0eb7f71a\r","/screens/screen-17.png":"6a4c90fcb1c970b7a36b155081550c740b812dd16b38997a75bd786301f5f407\r","/screens/screen-16.png":"573325ebb7e45621682d649c3c616a95ef7617cac93b5e4dbfd022a57e30968b\r","/screens/screen-15.png":"24f8f5eced3462ee1d46b1f5ced99183dc66e1ee5778afe05301bf00ab6bc14e\r","/screens/screen-14.png":"5ff29480cd01827cc3734784f9b9a9224b6c6481eec6b4d3865e85f4c36bffa8\r","/screens/screen-13.png":"ef49e0807033cf18dc2cb6db14f46d29f4fa9d1ae54da376e08b9676ee55409b\r","/screens/screen-12.png":"a061ad42d47f49446ae33ec86767e9b6e7af60ad5b2223d0a69f5488ec9fc825\r","/screens/screen-11.png":"3bc6ccb435f83c5aef35f1ac3b0f63fbb41187c46b4a9eef21da5fd2bcf174b8\r","/screens/screen-10.png":"9c3a6762d2198360d9b5e83807bf7b929887dcc361bba06c74b3178c0f7d78b1\r","/screens/screen-1.png":"1de0cd3ccb9307c0f8504534107c0fe59f811c3187c45b6d761bbdd0b623557e\r","/projects/project-9.jpg":"bb340ab13de0addc35e2c1df714dca1df34921872f4fa17d8c2e4cdc3dff79bb\r","/projects/project-8.jpg":"4e5dc51581b165d84a1219eae5a5e2f504230b666b166ed4821e4a7f81085782\r","/projects/project-6.jpg":"53e58d43450b5ef7480d3234438c40d86085e19e31976483b43a2ae48742fc4c\r","/projects/project-5.jpg":"61c8a1d0ad814acdf1b25648bce36fd0c2f494028e8d37dcbf3646c1b3c53510\r","/projects/project-4.jpg":"0527fda716b38064e0b57eed225cbe9b49a80d64004e2111c7e41529c0a1377f\r","/projects/project-3.jpg":"5c12dcc1f281d437b805f4839a577e8d6bda43cd01d8bcaa96e3d6062a7f2c0c\r","/projects/project-2.jpg":"784a199094e75a4e72ac8eba28cad900376ba2098973af00012611dfacb3c5c1\r","/projects/project-10.jpg":"d7feb1ee0eeca61bd5b3f57e99cd3a1c4eb536a7e8a911c41a0a1e2f9dbff721\r","/projects/project-1.jpg":"bdd302ff630ba0889252aa090d8ccd297722a0d296bd0d2e617567ac9c3f15ae\r","/projects/boat-controller.jpg":"9e52cab9e6f929f90557fad2b3308f2a28771a77a82fb82478c0271f7a04e91e\r","/__next._tree.txt":"f2c29d1c032ac3a9d21c462df44afd092d0fd0a0cb3e8c6743781faaf080863d","/__next.__PAGE__.txt":"f10dac73efcd853fb4a0484021ce392746db93699384b196d489160558123ffd","/__next._full.txt":"619b545ce65f333645754093d34fa2f570fb6463756c422f2dbe90428bd70c9f","/_not-found.txt":"7b5a5de00fd8aeab999c58fed0e44dbda256996f31e689f1e10a9952300ee5fa","/index.txt":"619b545ce65f333645754093d34fa2f570fb6463756c422f2dbe90428bd70c9f","/_not-found.html":"b5496e6834873e3be9fa077584bf118e8395eafe7b3fade0c87ed498cc93feeb","/icon.jpg":"83d4923732eeef786a3706ce613d6a02ec58313709e892db6ed67db1651df18a","/404.html":"b5496e6834873e3be9fa077584bf118e8395eafe7b3fade0c87ed498cc93feeb","/_not-found/__next._tree.txt":"17d9627cd395ec4be4044f018481612a982563767c30eef3224cec95309fb93c","/_next/static/WTFKPGoyfKrdcRuDsDEzQ/_ssgManifest.js":"dc28a4dc92fe352ed5d2201bd3972ce47691bc8e89e0400a68d1541d0567c6d5","/_not-found/__next._full.txt":"7b5a5de00fd8aeab999c58fed0e44dbda256996f31e689f1e10a9952300ee5fa","/_not-found/__next._not-found/__PAGE__.txt":"e0905ec2c8f35b886b77991e7ae724cd62cf634f97801033c95378ad97bb5f87","/_next/static/WTFKPGoyfKrdcRuDsDEzQ/_buildManifest.js":"dcbe1c9b9159ca21caea98e1bad364012ae284e9551375ca62b83d2811efac91","/_next/static/WTFKPGoyfKrdcRuDsDEzQ/_clientMiddlewareManifest.js":"5e57f6166b702492ab9551af57e4546546c184673a4c0432f73b96f62820f7eb","/index.html":"a02e1c2bd3e54a166b45f1a96c327febc4cf7ed261d6027bd35fb67039db1a85","/_next/static/media/icon.3kx8ghz4tit31.jpg":"83d4923732eeef786a3706ce613d6a02ec58313709e892db6ed67db1651df18a","/_next/static/media/ad66f9afd8947f86-s.3lvt2whj97whp.woff2":"21b0ae0980798b857a8228d5c0a8a31372bd0b5db034530c056f3b36b037e482","/_next/static/media/2bbe8d2671613f1f-s.0k62hbripvv8p.woff2":"5ef466d8ca6f4a51fa3751faea59ad2f63b15dbf9782ae4246bcadacc57f6b8f","/_next/static/chunks/turbopack-3-ry682tkyiqk.js":"3aa7ad81efb7524ea8b4e874085e2034b00a502b3a0e8c43ed598539fb0c9dc4","/_next/static/chunks/31qp8jfkw0x2h.js":"efdf65a6ef44613f0425620037743309fd4cb7942eedfa446ffbf05c13583073","/_next/static/chunks/0umf92h1sb77c.js":"bcc8aaa0ce974c499a9c987345b29d1d4cb97760ceae46d3075cdd929caff640","/_next/static/chunks/39uz0zjbm6buj.css":"a8d8bd382c274f4567489c92c60b22586b06a08b84882d248e8f90c7a7e62fae","/_next/static/chunks/1u6kqwwzlfcvh.js":"b4caa0a856717c0b48736ed6730ba094e701a17472e5773df9c71d60caa4fa29","/_next/static/media/9c72aa0f40e4eef8-s.1y4-pdgsjb-pw.woff2":"aeb03c5c1522d2fe6f6384711817dbd6cdbbb3dfa99276adf7325e9eacdae1ee","/_next/static/media/5476f68d60460930-s.2uwcyprjm3xu3.woff2":"c4de9995b3bb8a73da02308cb75721515f897229c3c422e51304e8afc4bdeccd","/_next/static/media/2c55a0e60120577a-s.0-dom-5bn10r2.woff2":"4ca02247386c89e13dde6791dd0632e3f22aaf94e91bc35ece0edf79ff3e0e77","/_next/static/media/11cc37d7380d16b4-s.27riv1g955cgo.woff2":"ea2d4b88af5f596a910b10aeff5f79a12de986e754e4aa5961b530d0b1c23d71","/_next/static/media/da4b870ab52b3094-s.2rv_b6cm3-gtx.woff2":"ebb1d8dde2be9bf44dd0193e86c4713985ac4874cc8f84cd0dbda116d4f4429c","/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2":"86835ac53a0e1de04820388d01b501389d5e9311509282b5e3bfbfc752754083","/_next/static/media/a85fe84266768609-s.p.0h6ig86gwutp4.woff2":"15661808622baa594a031e2f66932dc6cd1c11b6086874210ebde55c3401f144","/_next/static/chunks/0cz1d0mv5g_q7.js":"18e28d3214eda45048d80d3925ea7627b809e69ad2e95f7f98459e9146a61c3d","/_next/static/media/86d70b7c76b6ec6e-s.43yn3v1dnm71_.woff2":"bfd6b5835967b73b63ca146784e19aef75c9e81e3a5e8e5c2d5b630f4a719581","/_next/static/media/1bffadaabf893a1e-s.3-6t-g6q0vh0a.woff2":"cd2992a875e4939d47289a3cc44c8b8a0e63817f4cc9fbd8b3bdf93b5f66fbb3","/_next/static/chunks/2y1eglqyi_fri.js":"cf4d3f1b1599861bd0e19788d2b763de62440e454ec8b31d87bfd8523537c4a0","/_next/static/chunks/0s7mvllxht1mo.js":"179236a8f0f788bfb41bf48072210e97fc4ec903350a2d9a87c9faa537d26ed6"}}
+[debug] [2026-11-09T18:08:46.602Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/eshfaq-portfolio/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3:populateFiles 200
+[debug] [2026-11-09T18:08:46.602Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/eshfaq-portfolio/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3:populateFiles {"uploadRequiredHashes":["17d9627cd395ec4be4044f018481612a982563767c30eef3224cec95309fb93c","a02e1c2bd3e54a166b45f1a96c327febc4cf7ed261d6027bd35fb67039db1a85","f2c29d1c032ac3a9d21c462df44afd092d0fd0a0cb3e8c6743781faaf080863d","b5496e6834873e3be9fa077584bf118e8395eafe7b3fade0c87ed498cc93feeb","619b545ce65f333645754093d34fa2f570fb6463756c422f2dbe90428bd70c9f","7b5a5de00fd8aeab999c58fed0e44dbda256996f31e689f1e10a9952300ee5fa","e0905ec2c8f35b886b77991e7ae724cd62cf634f97801033c95378ad97bb5f87","f10dac73efcd853fb4a0484021ce392746db93699384b196d489160558123ffd","b4caa0a856717c0b48736ed6730ba094e701a17472e5773df9c71d60caa4fa29"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files"}
+[debug] [2026-11-09T18:08:46.603Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:46.603Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:46.603Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:46.603Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:46.604Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:46.604Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:46.604Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:46.604Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:46.605Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:46.605Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:46.605Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:46.605Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:46.605Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:46.605Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:46.606Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:46.606Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:46.606Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:46.606Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:46.607Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/17d9627cd395ec4be4044f018481612a982563767c30eef3224cec95309fb93c [none]
+[debug] [2026-11-09T18:08:46.607Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/17d9627cd395ec4be4044f018481612a982563767c30eef3224cec95309fb93c [stream]
+[debug] [2026-11-09T18:08:46.608Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/a02e1c2bd3e54a166b45f1a96c327febc4cf7ed261d6027bd35fb67039db1a85 [none]
+[debug] [2026-11-09T18:08:46.608Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/a02e1c2bd3e54a166b45f1a96c327febc4cf7ed261d6027bd35fb67039db1a85 [stream]
+[debug] [2026-11-09T18:08:46.609Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/f2c29d1c032ac3a9d21c462df44afd092d0fd0a0cb3e8c6743781faaf080863d [none]
+[debug] [2026-11-09T18:08:46.609Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/f2c29d1c032ac3a9d21c462df44afd092d0fd0a0cb3e8c6743781faaf080863d [stream]
+[debug] [2026-11-09T18:08:46.609Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/b5496e6834873e3be9fa077584bf118e8395eafe7b3fade0c87ed498cc93feeb [none]
+[debug] [2026-11-09T18:08:46.609Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/b5496e6834873e3be9fa077584bf118e8395eafe7b3fade0c87ed498cc93feeb [stream]
+[debug] [2026-11-09T18:08:46.610Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/619b545ce65f333645754093d34fa2f570fb6463756c422f2dbe90428bd70c9f [none]
+[debug] [2026-11-09T18:08:46.610Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/619b545ce65f333645754093d34fa2f570fb6463756c422f2dbe90428bd70c9f [stream]
+[debug] [2026-11-09T18:08:46.611Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/7b5a5de00fd8aeab999c58fed0e44dbda256996f31e689f1e10a9952300ee5fa [none]
+[debug] [2026-11-09T18:08:46.611Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/7b5a5de00fd8aeab999c58fed0e44dbda256996f31e689f1e10a9952300ee5fa [stream]
+[debug] [2026-11-09T18:08:46.612Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/e0905ec2c8f35b886b77991e7ae724cd62cf634f97801033c95378ad97bb5f87 [none]
+[debug] [2026-11-09T18:08:46.612Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/e0905ec2c8f35b886b77991e7ae724cd62cf634f97801033c95378ad97bb5f87 [stream]
+[debug] [2026-11-09T18:08:46.612Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/f10dac73efcd853fb4a0484021ce392746db93699384b196d489160558123ffd [none]
+[debug] [2026-11-09T18:08:46.613Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/f10dac73efcd853fb4a0484021ce392746db93699384b196d489160558123ffd [stream]
+[debug] [2026-11-09T18:08:46.613Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/b4caa0a856717c0b48736ed6730ba094e701a17472e5773df9c71d60caa4fa29 [none]
+[debug] [2026-11-09T18:08:46.613Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/b4caa0a856717c0b48736ed6730ba094e701a17472e5773df9c71d60caa4fa29 [stream]
+[debug] [2026-11-09T18:08:46.617Z] [hosting][populate queue][FINAL] {"max":1216,"min":1216,"avg":1216,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1227}
+[debug] [2026-11-09T18:08:46.618Z] [hosting] uploads queued: 9
+[info] i  hosting: uploading new files [0/9] (0%) 
+[debug] [2026-11-09T18:08:47.950Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/e0905ec2c8f35b886b77991e7ae724cd62cf634f97801033c95378ad97bb5f87 200
+[debug] [2026-11-09T18:08:47.950Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/e0905ec2c8f35b886b77991e7ae724cd62cf634f97801033c95378ad97bb5f87 [stream]
+[debug] [2026-11-09T18:08:48.022Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/7b5a5de00fd8aeab999c58fed0e44dbda256996f31e689f1e10a9952300ee5fa 200
+[debug] [2026-11-09T18:08:48.023Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/7b5a5de00fd8aeab999c58fed0e44dbda256996f31e689f1e10a9952300ee5fa [stream]
+[debug] [2026-11-09T18:08:48.143Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/f2c29d1c032ac3a9d21c462df44afd092d0fd0a0cb3e8c6743781faaf080863d 200
+[debug] [2026-11-09T18:08:48.143Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/f2c29d1c032ac3a9d21c462df44afd092d0fd0a0cb3e8c6743781faaf080863d [stream]
+[debug] [2026-11-09T18:08:48.212Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/619b545ce65f333645754093d34fa2f570fb6463756c422f2dbe90428bd70c9f 200
+[debug] [2026-11-09T18:08:48.212Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/619b545ce65f333645754093d34fa2f570fb6463756c422f2dbe90428bd70c9f [stream]
+[debug] [2026-11-09T18:08:48.266Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/b4caa0a856717c0b48736ed6730ba094e701a17472e5773df9c71d60caa4fa29 200
+[debug] [2026-11-09T18:08:48.266Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/b4caa0a856717c0b48736ed6730ba094e701a17472e5773df9c71d60caa4fa29 [stream]
+[debug] [2026-11-09T18:08:48.275Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/b5496e6834873e3be9fa077584bf118e8395eafe7b3fade0c87ed498cc93feeb 200
+[debug] [2026-11-09T18:08:48.275Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/b5496e6834873e3be9fa077584bf118e8395eafe7b3fade0c87ed498cc93feeb [stream]
+[debug] [2026-11-09T18:08:48.296Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/a02e1c2bd3e54a166b45f1a96c327febc4cf7ed261d6027bd35fb67039db1a85 200
+[debug] [2026-11-09T18:08:48.296Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/a02e1c2bd3e54a166b45f1a96c327febc4cf7ed261d6027bd35fb67039db1a85 [stream]
+[debug] [2026-11-09T18:08:48.335Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/f10dac73efcd853fb4a0484021ce392746db93699384b196d489160558123ffd 200
+[debug] [2026-11-09T18:08:48.335Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/f10dac73efcd853fb4a0484021ce392746db93699384b196d489160558123ffd [stream]
+[debug] [2026-11-09T18:08:48.341Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/17d9627cd395ec4be4044f018481612a982563767c30eef3224cec95309fb93c 200
+[debug] [2026-11-09T18:08:48.341Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3/files/17d9627cd395ec4be4044f018481612a982563767c30eef3224cec95309fb93c [stream]
+[debug] [2026-11-09T18:08:48.341Z] [hosting][upload queue][FINAL] {"max":1739,"min":1345,"avg":1600.5555555555557,"active":0,"complete":9,"success":9,"errored":0,"retried":0,"total":9,"elapsed":1739}
+[info] i  hosting: upload complete 
+[info] +  hosting[eshfaq-portfolio]: file upload complete 
+[debug] [2026-11-09T18:08:48.342Z] [hosting] deploy completed after 2992ms
+[debug] [2026-11-09T18:08:48.342Z] [
+  {
+    "config": {
+      "public": "out",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "cleanUrls": true,
+      "headers": [
+        {
+          "source": "/_next/static/**",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "public, max-age=31536000, immutable"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(jpg|jpeg|png|svg|webp|pdf)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "public, max-age=86400"
+            }
+          ]
+        }
+      ],
+      "site": "eshfaq-portfolio"
+    },
+    "version": "projects/eshfaq-portfolio/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3"
+  }
+]
+[info] i  hosting[eshfaq-portfolio]: finalizing version... 
+[debug] [2026-11-09T18:08:48.343Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:48.344Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:48.344Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/eshfaq-portfolio/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3 updateMask=status%2Cconfig
+[debug] [2026-11-09T18:08:48.344Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/eshfaq-portfolio/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3 {"status":"FINALIZED","config":{"headers":[{"glob":"/_next/static/**","headers":{"Cache-Control":"public, max-age=31536000, immutable"}},{"glob":"**/*.@(jpg|jpeg|png|svg|webp|pdf)","headers":{"Cache-Control":"public, max-age=86400"}}],"cleanUrls":true}}
+[debug] [2026-11-09T18:08:49.959Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/eshfaq-portfolio/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3 200
+[debug] [2026-11-09T18:08:49.959Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/eshfaq-portfolio/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3 {"name":"projects/eshfaq-portfolio/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"public, max-age=31536000, immutable"},"glob":"/_next/static/**"},{"headers":{"Cache-Control":"public, max-age=86400"},"glob":"**/*.@(jpg|jpeg|png|svg|webp|pdf)"}],"cleanUrls":true},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-11-09T18:08:35.549058Z","createUser":{"email":"ishfaqkh5kamal@gmail.com"},"finalizeTime":"2026-11-09T18:08:40.954930Z","finalizeUser":{"email":"ishfaqkh5kamal@gmail.com"}}
+[debug] [2026-11-09T18:08:49.960Z] [hosting] finalized version for eshfaq-portfolio:[object Object]
+[info] +  hosting[eshfaq-portfolio]: version finalized 
+[info] i  hosting[eshfaq-portfolio]: releasing new version... 
+[debug] [2026-11-09T18:08:49.961Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:49.961Z] Checked if tokens are valid: true, expires at: 1794251318856
+[debug] [2026-11-09T18:08:49.962Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/eshfaq-portfolio/sites/eshfaq-portfolio/channels/live/releases versionName=projects%2Feshfaq-portfolio%2Fsites%2Feshfaq-portfolio%2Fversions%2Fbf57cc8f85e2b7d3
+[debug] [2026-11-09T18:08:49.962Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/eshfaq-portfolio/sites/eshfaq-portfolio/channels/live/releases {}
+[debug] [2026-11-09T18:08:51.663Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/eshfaq-portfolio/sites/eshfaq-portfolio/channels/live/releases 200
+[debug] [2026-11-09T18:08:51.664Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/eshfaq-portfolio/sites/eshfaq-portfolio/channels/live/releases {"name":"projects/eshfaq-portfolio/sites/eshfaq-portfolio/channels/live/releases/1794247721610000","version":{"name":"projects/eshfaq-portfolio/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"public, max-age=31536000, immutable"},"glob":"/_next/static/**"},{"headers":{"Cache-Control":"public, max-age=86400"},"glob":"**/*.@(jpg|jpeg|png|svg|webp|pdf)"}],"cleanUrls":true},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-11-09T18:08:35.549058Z","createUser":{"email":"ishfaqkh5kamal@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLCwFyZ0mfcrlonqkNj9Ne1iR2nOANrsbuxHgUvJeSIpI4zPRk=mo"},"finalizeTime":"2026-11-09T18:08:40.954930Z","finalizeUser":{"email":"ishfaqkh5kamal@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLCwFyZ0mfcrlonqkNj9Ne1iR2nOANrsbuxHgUvJeSIpI4zPRk=mo"}},"type":"DEPLOY","releaseTime":"2026-11-09T18:08:41.610Z","releaseUser":{"email":"ishfaqkh5kamal@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLCwFyZ0mfcrlonqkNj9Ne1iR2nOANrsbuxHgUvJeSIpI4zPRk=mo"}}
+[debug] [2026-11-09T18:08:51.664Z] [hosting] release: {"name":"projects/eshfaq-portfolio/sites/eshfaq-portfolio/channels/live/releases/1794247721610000","version":{"name":"projects/eshfaq-portfolio/sites/eshfaq-portfolio/versions/bf57cc8f85e2b7d3","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"public, max-age=31536000, immutable"},"glob":"/_next/static/**"},{"headers":{"Cache-Control":"public, max-age=86400"},"glob":"**/*.@(jpg|jpeg|png|svg|webp|pdf)"}],"cleanUrls":true},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-11-09T18:08:35.549058Z","createUser":{"email":"ishfaqkh5kamal@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLCwFyZ0mfcrlonqkNj9Ne1iR2nOANrsbuxHgUvJeSIpI4zPRk=mo"},"finalizeTime":"2026-11-09T18:08:40.954930Z","finalizeUser":{"email":"ishfaqkh5kamal@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLCwFyZ0mfcrlonqkNj9Ne1iR2nOANrsbuxHgUvJeSIpI4zPRk=mo"}},"type":"DEPLOY","releaseTime":"2026-11-09T18:08:41.610Z","releaseUser":{"email":"ishfaqkh5kamal@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLCwFyZ0mfcrlonqkNj9Ne1iR2nOANrsbuxHgUvJeSIpI4zPRk=mo"}}
+[info] +  hosting[eshfaq-portfolio]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/eshfaq-portfolio/overview
+[info] Hosting URL: https://eshfaq-portfolio.web.app
