@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { FULL_NAME, NAME } from "@/lib/data";
-import ImageTrail from "@/components/ImageTrail";
 
 export default function Hero({ loaded }: { loaded: boolean }) {
   return (
@@ -13,7 +12,6 @@ export default function Hero({ loaded }: { loaded: boolean }) {
           <div className="absolute left-1/2 top-[55%] h-[70vmin] w-[70vmin] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--accent)] opacity-20 blur-[120px]" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,#070707_85%)]" />
         </div>
-        <ImageTrail />
 
         {/* script name on a line */}
         <div className="absolute inset-x-0 top-[38%] hidden items-center xl:flex">
